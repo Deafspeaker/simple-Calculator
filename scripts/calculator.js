@@ -90,9 +90,17 @@ function calculate() {
     case "-":
       return number1 - number2;
     case "/":
+      if( number2 === 0) {
+        if ( number1 === 0) {
+          return "Really? 0/0? 🤔";
+        }
+        return "Don't break me!";
+      }
       return number1 / number2;
+      
     case "X":
       return number1 * number2;
       default: return display.value;
   }
 }
+
